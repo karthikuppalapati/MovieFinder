@@ -1,0 +1,24 @@
+<link rel="stylesheet" href="results.css">
+<p id="results-heading">Related movies to
+    <%=movieName.toUpperCase()%>
+</p>
+
+<div class="grid-container">
+    <% data.Search.forEach((movie) =>{%>
+        <div class="grid-item">
+            <img style="width:10vw" src=<%=movie.Poster %> >
+            <p>
+                <%= movie.Title%>
+            </p>
+            <p>Year of release:
+                <%=movie.Year%>
+            </p>
+            <p>IMDB ID:
+                <%=movie.imdbID%>
+            </p>
+            <p>Type:
+                <%=movie.Type%>
+            </p>
+        </div>
+        <%}) %>
+</div>
